@@ -24,30 +24,26 @@ export const Item = styled.div`
 
 export const Container = styled.section`
   background-color: black;
-  @media (max-width: 1000px) {
-    ${Item}:nth-of-type(2) h2 {
-      margin-bottom: 0;
-    }
-  }
 `;
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 0.2em;
 
   @media (min-width: 600px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 
 export const Subtitle = styled.h2`
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: 2em;
+  line-height: 1.2;
   @media (min-width: 600px) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 `;
 
