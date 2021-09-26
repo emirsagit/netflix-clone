@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, OptForm } from "../components";
+import { Header } from "../components";
 import * as ROUTES from "../constants/routes";
 
 export default function HeaderContainer({ children }) {
@@ -7,13 +7,9 @@ export default function HeaderContainer({ children }) {
     <Header>
       <Header.Frame>
         <Header.Logo to={ROUTES.HOME} src="/images/misc/logo.svg" alt="logo" />
-        <Header.ButtonLink>Sign In</Header.ButtonLink>
+        <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
       </Header.Frame>
-      <OptForm>
-        <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
-        <OptForm.Input />
-        <OptForm.Button>Get Started</OptForm.Button>
-      </OptForm>
+      {children}
     </Header>
   );
 }

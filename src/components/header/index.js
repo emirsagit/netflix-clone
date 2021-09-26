@@ -1,13 +1,17 @@
 import React from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
-import { Background, Container, ButtonLink, Logo, Link } from "./styles/header";
+import { Background, Container, ButtonLink, Logo, Link, Group, Text } from "./styles/header";
 
 export default function Header({ bg = true, children, ...restProps }) {
-  return bg ? <Background {...restProps}>{children}</Background> : { children };
+  return bg ? <Background {...restProps}>{children}</Background> : <div>{children}</div>;
 }
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
+};
+
+Header.Group = function HeaderGroup({ children, ...restProps }) {
+  return <Group {...restProps}>{children}</Group>;
 };
 
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
@@ -16,6 +20,14 @@ Header.Logo = function HeaderLogo({ to, ...restProps }) {
       <Logo {...restProps} />
     </ReactRouterLink>
   );
+};
+
+Header.Text = function HeaderText({ children, ...restProps }) {
+  return <Text {...restProps}>{children}</Text>;
+};
+
+Header.Link = function HeaderLink({ children, ...restProps }) {
+  return <Link {...restProps}>{children}</Link>;
 };
 
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
