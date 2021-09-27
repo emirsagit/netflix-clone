@@ -14,20 +14,20 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path={ROUTES.SIGN_IN}>
+        <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.SIGN_IN}>
           <Signin />
-        </Route>
-        <Route path={ROUTES.REGISTER}>
+        </IsUserRedirect>
+        <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.REGISTER}>
           <Signup />
-        </Route>
+        </IsUserRedirect>
         <ProtectedRoute user={user} path={ROUTES.BROWSE}>
           <UserContext.Provider value={{ user: user }}>
             <Browse />
           </UserContext.Provider>
         </ProtectedRoute>
-        <Route path={ROUTES.HOME}>
+        <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.HOME}>
           <Home />
-        </Route>
+        </IsUserRedirect>
       </Switch>
     </Router>
   );

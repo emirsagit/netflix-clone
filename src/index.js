@@ -30,7 +30,7 @@ const fireStore = getFirestore(firebase);
 
 ReactDOM.render(
   <React.StrictMode>
-    <FirebaseContext.Provider value={{ firebase: firebase }}>
+    <FirebaseContext.Provider value={{ firebase: firebase, fireStore: fireStore }}>
       <GlobalStyles />
       <App />
     </FirebaseContext.Provider>
