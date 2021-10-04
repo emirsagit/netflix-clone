@@ -26,7 +26,7 @@ export const Input = styled.input`
   font-size: 1.3rem;
   margin: 0 auto 1rem;
   @media (min-width: 1000px) {
-    margin: 0;
+    margin: 1rem 0;
   }
 `;
 
@@ -44,7 +44,6 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 2px;
-  margin-top: 1.5em;
   img {
     margin-left: 10px;
     filter: brightness(0) invert(1);
