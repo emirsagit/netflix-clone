@@ -44,6 +44,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 2px;
+  margin-top: 1.5em;
   img {
     margin-left: 10px;
     filter: brightness(0) invert(1);
