@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://615b0e18b5a2d127119f7e8a--netflix-clone-with-compound.netlify.app/)
+[Live Demo Link](https://netflix-clone-with-compound.netlify.app/)
 login information: email: demo@gmail.com pasword: demo123456
  
 ## My process
